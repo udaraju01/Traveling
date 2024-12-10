@@ -1,56 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="logincss.css">
+    
+    
 </head>
-<body >
+
+<body>
     <div class="main_div">
-        <form id="form"> 
+        <form id="form">
             <div>
                 <div class="title">LongIn</div>
                 <div class=" social_icons">
-                    <a href="https://www.facebook.com/" ><i class="fa fa-facebook"><span>facebook</span></i></a>
-                    <a href="https://twitter.com/i/flow/login" ><i class="fa fa-twitter"><span>twitter</span></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook"><span>facebook</span></i></a>
+                    <a href="https://twitter.com/i/flow/login"><i class="fa fa-twitter"><span>twitter</span></i></a>
                 </div>
-                <div id="error_msgs" style="color: red; text-align: center;"></div>
-            
+                <div id="error_msgs" style="color: red; text-align: center;">
+                    
+                </div>
+
                 <div class="input_box">
-                    <input type="text" id="email" placeholder="Email">
+                    <input type="text" id="email" placeholder="Email" >
                     <div class="icon"><i aria-hidden="true" class="fa fa-envelope"></i></div>
                 </div>
                 <div class="error" id="emailerror_msg" style="color:red;"></div>
                 <div class="input_box">
                     <input type="password" id="password" placeholder="Password">
-                    <div class="icon"><i aria-hidden="true" class="fa fa-lock"></i></div>
+                    <div class="icon"><i aria-hidden="true" class="fa fa-key"></i></div>
                 </div>
                 <div class="error" id="passworderror_msg" style="color: red;"></div>
                 <div class="checkboxfor">
-                    <div class="opstion_div"> 
-                        <input type="checkbox" id="checkbox" > <span>Remember me</span>
+                    <div class="opstion_div">
+                        <input type="checkbox" id="checkbox"> <span>Remember me</span>
                     </div>
-                    
-                    <div class="forget_div" >
-                        <a href="#" ><span>forgot password</span></a>
+
+                    <div class="forget_div">
+                        <a href="#"><span>forgot password</span></a>
                     </div>
                 </div>
                 <div class="error" id="check_error" style="color: red;"></div>
 
                 <div class="input_box button">
-                    <input type="submit"  value="LogIn">
+                    <input type="submit" value="LogIn">
                 </div>
                 <div class="sigup">not remember me?
-                    <a href="mainpage.html">Sign Up</a></div>
+                    <a href="sigup.html">Sign Up</a>
+                </div>
 
             </div>
-            
+            <script src="login.js"></script> 
+
         </form>
-        <script src="login.js"></script>    
+        
+
 
     </div>
-    
+
 </body>
+
 </html>

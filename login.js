@@ -46,7 +46,6 @@ const radioButtons =document.getElementById('rd1');
 
 if(form){
   form.addEventListener('submit', (e)=>{
-    alert("form");
     
       e.preventDefault();
       login_validation();
@@ -58,7 +57,6 @@ if(sigup_form){
   sigup_form.addEventListener('submit', (e)=>{
   
     e.preventDefault();
-    alert("sigup_form");
     sigup_validations();
     
   
@@ -67,12 +65,12 @@ if(sigup_form){
 
 function validateEmailAndPassword(){
   var emailreg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,6}$/;
-
+  //email validation
   if (email.value == "") {
     emailerror_msg.innerHTML = "Please Enter Email";
   }
   else if (!email.value.match(emailreg)) {
-    emailerror_msg.innerHTML = "Enter email is not invalid";
+    emailerror_msg.innerHTML = "Enter email is not valid";
   }
   else {
     emailerror_msg.innerHTML = "";
@@ -85,6 +83,7 @@ function validateEmailAndPassword(){
     passworderror_msg.innerHTML = "";
   }
 }
+
 //login validation
 function login_validation() {
   validateEmailAndPassword();
@@ -99,18 +98,15 @@ function login_validation() {
 }
 
 //sigup validations
-
 function sigup_validations() {
 
   validateEmailAndPassword();
   //confirm password validation
-  if (confirm_password.value.trim() == "") {
-    // e.preventDefault();
+  if (confirm_password.value.trim() == ""){
     confirmpassword_msg.innerHTML = " please Enter  confirm password";
 
   }
   else if (password.value != confirm_password.value) {
-    //e.preventDefault();
     confirmpassword_msg.innerHTML = "password does not match";
   }
   else {
@@ -119,7 +115,6 @@ function sigup_validations() {
 
   //first name validation
   if (firstname.value.trim() == "") {
-    //e.preventDefault();
     firstnameerror_msg.innerHTML = "please enter first name";
   }
   else {
@@ -128,7 +123,6 @@ function sigup_validations() {
 
   //secondname validation
   if (lastname.value.trim() == "") {
-    //e.preventDefault();
     lastnameerror_msg.innerHTML = "please enter last name"
   }
   else {
@@ -137,8 +131,12 @@ function sigup_validations() {
 
   //radio validation
   
-
-  
+  if(!radioButtons.checked) {   
+    radioerror_msg.innerHTML="please select Gender";
+  } 
+  else {  
+        radioerror_msg.innerHTML="";
+  }
 };
 
 

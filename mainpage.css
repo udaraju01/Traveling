@@ -1,0 +1,9 @@
+.about {
+    height: 100px;
+    background-color: red;
+}
+
+.about ul{
+    display: inline;
+   
+}
